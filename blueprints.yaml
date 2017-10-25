@@ -1,0 +1,27 @@
+name: Popular Taxonomy
+version: 1.0.0
+description: "With the **Popular Taxonomy plugin** you can easily create a list of **taxonomy** items (such as **tags** or **categories**), sorted by popularity."
+icon: tag
+author:
+  name: Paul Bovis
+  email: paul.bovis@canada.ca
+  url: http://5to9design.ca
+homepage: https://github.com/bovisp/grav-plugin-popular-taxonomy
+demo: 
+keywords: taxonomy, plugin, popular, list
+bugs: https://github.com/getgrav/grav-plugin-popular-taxonomy/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

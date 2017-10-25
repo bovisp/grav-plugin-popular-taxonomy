@@ -1,0 +1,31 @@
+{% if truncate and max %}
+
+    {% set taxlist = populartaxonomy.get(taxonomy, truncate, max) %}
+
+{% elseif truncate %}
+
+    {% set taxlist = populartaxonomy.get(taxonomy, truncate) %}
+
+{% else %}
+
+    {% set taxlist = populartaxonomy.get(taxonomy) %}
+
+{% endif %}
+
+{% if taxlist %}
+
+    <ul>
+
+        {% for tax in taxlist %}
+
+            {% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
+
+            <li>
+                <a class="{{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+{% endif %}

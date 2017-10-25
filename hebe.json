@@ -1,0 +1,13 @@
+{
+    "project": "grav-plugin-popular-taxonomy",
+    "platforms": {
+        "grav": {
+            "nodes": {
+                "plugin": [{
+                    "source": "/",
+                    "destination": "/user/plugins/popular-taxonomy"
+                }]
+            }
+        }
+    }
+}
